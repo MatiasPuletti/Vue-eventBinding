@@ -1,7 +1,8 @@
 const app = Vue.createApp({
   data() {
     return {
-      userInput: ''
+      userInput: '',
+      confirmInput: ''
     };
   },
   methods: {
@@ -10,6 +11,9 @@ const app = Vue.createApp({
     },
     keydownInput(event) {
       this.userInput = event.target.value;
+    },
+    enterInput(event) {
+      this.confirmInput = this.userInput;
     }
   }
 });
